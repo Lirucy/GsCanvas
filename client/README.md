@@ -38,7 +38,7 @@
 
 ### PostMVP  
 
-- Add Cloudinary API for image uploads
+- Add Cloudinary API for image uploads  
 - Add Likes
 - Additional styling/animations  
 - Add footer
