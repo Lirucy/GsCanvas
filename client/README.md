@@ -40,7 +40,7 @@
 
 - Add Cloudinary API for image uploads
 - Add Likes
-- Additional styling/animations
+- Additional styling/animations  
 - Add footer
 
 ## Timeframes
