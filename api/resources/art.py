@@ -35,7 +35,7 @@ def update_art(id):
     except DoesNotExist:
         return jsonify(message='Error updating art piece'), 500
 
-@art.route('/', methods=['POST'])
+@art.route('/new', methods=['POST'])
 def add_art():
     body = request.get_json()
     art_piece = Art.create(**body)
@@ -48,6 +48,7 @@ def delete_art(id):
             .delete()
             .where(Art.id == id)
             .execute())
+        return jsonify(message='Art piece successfully deleted!'), 200
     except DoesNotExist:
-        return jsonify(message='Error deleting  art piece'), 200
+        return jsonify(message='Error deleting  art piece'), 500
 

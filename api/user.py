@@ -10,4 +10,4 @@ class User(UserMixin, Model):
     password = CharField()
 
     class Meta:
-        database = Database
+        database = DATABASE

@@ -7,4 +7,4 @@ class Art(Model):
     url = CharField()
 
     class Meta:
-        database = Database
+        database = DATABASE
