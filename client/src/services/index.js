@@ -51,7 +51,7 @@ export const getAllComments = async () => {
 
 export const getOneComment = async (id) => {
   try {
-    const response = await axios.get(`${apiURL}/api/comments/:id`);
+    const response = await axios.get(`${apiURL}/api/comments/:id`, id);
     return response.data;
   } catch (error) {
     console.error(error.message);
@@ -69,6 +69,14 @@ export const updateComment = async (commentInfo) => {
 export const createComment = async (newComment) => {
   try {
     await axios.post(`${apiURL}/api/comments/:id`, newComment);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+export const deleteComment = async (id) => {
+  try {
+    await axios.delete(`${apiURL}/api/comments/:id`, id);
   } catch (error) {
     console.error(error.message);
   }
