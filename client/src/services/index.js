@@ -40,6 +40,24 @@ export const logout = async () => {
   }
 };
 
+export const getAllArt = async () => {
+  try {
+    const response = await axios.get(`${apiURL}/api/art`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+export const getOnePiece = async (id) => {
+  try {
+    const response = await axios.get(`${apiURL}/api/art/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
 export const getAllComments = async () => {
   try {
     const response = await axios.get(`${apiURL}/api/comments`);
@@ -60,7 +78,10 @@ export const getOneComment = async (id) => {
 
 export const updateComment = async (id, commentInfo) => {
   try {
-    const response = await axios.put(`${apiURL}/api/comments/${id}`, commentInfo);
+    const response = await axios.put(
+      `${apiURL}/api/comments/${id}`,
+      commentInfo
+    );
   } catch (error) {
     console.error(error.message);
   }
