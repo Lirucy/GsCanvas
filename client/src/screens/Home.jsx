@@ -1,19 +1,22 @@
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { getAllArt } from "../services";
 
-const Home = () => {
-
-    const getImages = async () => {
-        const response = await axios.get();
-    }
+const Home = (props) => {
+    const [artPieces, setArtPieces] = useState([])
 
     useEffect(() => {
-        getImages();
+        getAllArt().then((fetchedArt) => setArtPieces(fetchedArt))
     }, [])
     
     return (
-        <div>
-        </div>
+        <section className="home-body">
+            <div className="all-art">
+                {artPieces.map((artPiece) => (
+                    <Art key={artPiece.id} artPiece={artPiece} user={props.user} />
+                ))}
+            </div>
+        </section>
     );
 };
 
