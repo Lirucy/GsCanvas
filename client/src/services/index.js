@@ -40,6 +40,15 @@ export const logout = async () => {
   }
 };
 
+export const getAllComments = async () => {
+  try {
+    const response = await axios.get(`${apiURL}/api/comments`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
 export const createComment = async (newComment) => {
   try {
     await axios.post(`${apiURL}/api/comments/:id`, newComment);
