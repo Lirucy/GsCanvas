@@ -31,3 +31,11 @@ export const login = async (userInfo) => {
     console.error(error.message);
   }
 };
+
+export const logout = async () => {
+  try {
+    await axios.get(`${apiURL}/auth/user/logout`);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
