@@ -1,17 +1,30 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./screens/Home";
+import Nav from "./components/Nav";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 import "./App.css";
 
 function App() {
-  
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   return (
     <div className="App">
-      <Route>
-        <Home user={user}/>
-      </Route>
+      <Nav user={user} setUser={setUser}/> 
+      <Switch>
+        <main>
+          <Route exact path="/">
+            <h3>This is home!</h3>
+          </Route>
+          <Route path="/register">
+            <Register setUser={setUser}/>
+          </Route>
+          <Route path="/login">
+            <Login setUser={setUser}/>
+          </Route>
+        </main>
+      </Switch>
     </div>
   );
 }
