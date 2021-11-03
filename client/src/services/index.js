@@ -49,6 +49,15 @@ export const getAllComments = async () => {
   }
 };
 
+export const getOneComment = async (id) => {
+  try {
+    const response = await axios.get(`${apiURL}/api/comments/:id`);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
 export const createComment = async (newComment) => {
   try {
     await axios.post(`${apiURL}/api/comments/:id`, newComment);
