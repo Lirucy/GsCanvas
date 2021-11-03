@@ -5,7 +5,7 @@ from playhouse.shortcuts import model_to_dict
 
 from art import Art
 
-art = Blueprint('art', __name__, url_prefix='/art')
+art = Blueprint('art', __name__, url_prefix='/api/art')
 
 @art.route('/')
 def get_all_art():
@@ -19,7 +19,7 @@ def get_all_art():
 def get_one_piece(id):
     try:
         art_piece = Art.get_by_id(id)
-        return jsonify(model_to_dict(art_piece)), 200
+        return jsonify(model_to_dict(art_piece, backrefs=True)), 200
     except DoesNotExist:
         return jsonify(message='Error getting art piece'), 500
 

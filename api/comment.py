@@ -7,7 +7,7 @@ from user import User
 class Comment(Model):
     comment = CharField()
     user = ForeignKeyField(User, backref='comments')
-    art = ForeignKeyField(Art, backref='comments')
+    art_id = ForeignKeyField(Art, backref='comments')
 
     class Meta:
         database = DATABASE

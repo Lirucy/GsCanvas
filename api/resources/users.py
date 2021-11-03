@@ -6,7 +6,7 @@ from playhouse.shortcuts import model_to_dict
 
 from user import User
 
-user = Blueprint('users', __name__, url_prefix='/auth')
+user = Blueprint('users', __name__, url_prefix='/auth/user')
 
 @user.route('/register', methods=['POST'])
 def register():
