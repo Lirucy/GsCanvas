@@ -13,3 +13,12 @@ export const defaultRoute = async () => {
     console.error(error.message);
   }
 };
+
+export const register = async (newUser) => {
+  try {
+    const response = await axios.post(`${apiURL}/auth/user/register`, newUser);
+    return response.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+};
