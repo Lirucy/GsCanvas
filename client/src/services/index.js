@@ -51,24 +51,24 @@ export const getAllComments = async () => {
 
 export const getOneComment = async (id) => {
   try {
-    const response = await axios.get(`${apiURL}/api/comments/:id`, id);
+    const response = await axios.get(`${apiURL}/api/comments/${id}`);
     return response.data;
   } catch (error) {
     console.error(error.message);
   }
 };
 
-export const updateComment = async (commentInfo) => {
+export const updateComment = async (id, commentInfo) => {
   try {
-    const response = await axios.put(`${apiURL}/api/comments/:id`, commentInfo);
+    const response = await axios.put(`${apiURL}/api/comments/${id}`, commentInfo);
   } catch (error) {
     console.error(error.message);
   }
 };
 
-export const createComment = async (newComment) => {
+export const createComment = async (id, newComment) => {
   try {
-    await axios.post(`${apiURL}/api/comments/:id`, newComment);
+    await axios.post(`${apiURL}/api/comments/${id}`, newComment);
   } catch (error) {
     console.error(error.message);
   }
@@ -76,7 +76,7 @@ export const createComment = async (newComment) => {
 
 export const deleteComment = async (id) => {
   try {
-    await axios.delete(`${apiURL}/api/comments/:id`, id);
+    await axios.delete(`${apiURL}/api/comments/${id}`);
   } catch (error) {
     console.error(error.message);
   }
