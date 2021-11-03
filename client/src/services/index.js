@@ -39,3 +39,11 @@ export const logout = async () => {
     console.error(error.message);
   }
 };
+
+export const createComment = async (newComment) => {
+  try {
+    await axios.post(`${apiURL}/api/comments/:id`, newComment);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
