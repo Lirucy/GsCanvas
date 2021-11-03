@@ -15,7 +15,7 @@ function App() {
       <Switch>
         <main>
           <Route exact path="/">
-            <h3>This is home!</h3>
+            <Home />
           </Route>
           <Route path="/register">
             <Register setUser={setUser}/>

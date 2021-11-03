@@ -10,7 +10,6 @@ const Home = () => {
         getAllArt().then((fetchedArt) => setArtPieces(fetchedArt))
         
     }, [])
-    console.log(artPieces)
     
     
     return (

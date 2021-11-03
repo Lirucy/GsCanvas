@@ -42,7 +42,7 @@ export const logout = async () => {
 
 export const getAllArt = async () => {
   try {
-    const response = await axios.get(`${apiURL}/api/art`);
+    const response = await axios.get(`${apiURL}/api/art/`);
     return response.data;
   } catch (error) {
     console.error(error.message);
