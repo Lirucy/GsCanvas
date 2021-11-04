@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./screens/Home";
 import Nav from "./components/Nav";
 import ArtDetail from "./screens/ArtDetail"
+import EditComment from "./screens/EditComment";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import UserProfile from "./screens/UserProfile";
@@ -28,6 +29,9 @@ function App() {
           <Route path="/user-profile">
             <UserProfile user={user}/>
           </Route>
+          {/* <Route path="/edit-comment/:id">
+            <EditComment />
+          </Route> */}
           <Route path="/art/:id">
             <ArtDetail user={user}/>
           </Route>
