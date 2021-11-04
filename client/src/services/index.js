@@ -76,10 +76,10 @@ export const getOneComment = async (id) => {
   }
 };
 
-export const updateComment = async (id, commentInfo) => {
+export const updateComment = async (commentInfo, commentId) => {
   try {
     const response = await axios.put(
-      `${apiURL}/api/comments/${id}`,
+      `${apiURL}/api/comments/${commentId}`,
       commentInfo
     );
   } catch (error) {
@@ -95,9 +95,9 @@ export const createComment = async (newComment, artId) => {
   }
 };
 
-export const deleteComment = async (id) => {
+export const deleteComment = async (commentId) => {
   try {
-    await axios.delete(`${apiURL}/api/comments/${id}`);
+    await axios.delete(`${apiURL}/api/comments/${commentId}`);
   } catch (error) {
     console.error(error.message);
   }

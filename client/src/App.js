@@ -29,9 +29,9 @@ function App() {
           <Route path="/user-profile">
             <UserProfile user={user}/>
           </Route>
-          {/* <Route path="/edit-comment/:id">
+          <Route path="/edit-comment/:id">
             <EditComment />
-          </Route> */}
+          </Route>
           <Route path="/art/:id">
             <ArtDetail user={user}/>
           </Route>

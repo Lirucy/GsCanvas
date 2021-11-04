@@ -7,7 +7,7 @@ const Nav = (props) => {
   const clickHandler = async () => {
     await logout();
     props.setUser(null);
-    history.push("/login");
+    history.push("/");
   };
 
   return (

@@ -46,7 +46,25 @@ const EditComment = () => {
 
     return (
         <div>
-            
+            <form onSubmit={handleUpdate}>
+                <h3>Edit your comment</h3>
+                <label htmlFor="comment"></label>
+                <textarea type="text" required value={comment} onChange={(e) => setComment(e.target.value)}
+                />
+                <div className="edit-btns">
+                    <button id="submit-btn" type="submit">submit</button>
+                    <button 
+                    id="cancel-btn" 
+                    onClick={() => history.push("/user-profile")}>Cancel
+                    </button>
+                    <button 
+                    id="delete-btn"  
+                    type="submit" 
+                    onClick={handleDelete}>Delete Comment
+                    </button>
+                </div>
+            </form>
+
         </div>
     );
 };

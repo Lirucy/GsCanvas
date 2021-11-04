@@ -3,7 +3,7 @@
   text-decoration: none;
 }
 
-button, input {
+button, input, textarea {
   border: 1px solid darkred;
   background-color: darkred;
   background-image: linear-gradient(black, darkred, black);
