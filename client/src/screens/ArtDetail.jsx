@@ -24,7 +24,7 @@ const ArtDetail = (props) => {
             comment
         } 
         await createComment(newComment, artId)
-        history.push("/")
+        history.push("/user-profile")
     }
 
     return (
