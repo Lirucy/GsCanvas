@@ -87,9 +87,9 @@ export const updateComment = async (id, commentInfo) => {
   }
 };
 
-export const createComment = async (id, newComment) => {
+export const createComment = async (newComment, artId) => {
   try {
-    await axios.post(`${apiURL}/api/comments/${id}`, newComment);
+    await axios.post(`${apiURL}/api/comments/${artId}`, newComment);
   } catch (error) {
     console.error(error.message);
   }

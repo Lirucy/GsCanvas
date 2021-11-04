@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./screens/Home";
 import Nav from "./components/Nav";
+import ArtDetail from "./screens/ArtDetail"
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import "./App.css";
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login setUser={setUser}/>
+          </Route>
+          <Route path="/art/:id">
+            <ArtDetail user={user}/>
           </Route>
         </main>
       </Switch>
