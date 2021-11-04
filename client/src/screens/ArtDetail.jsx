@@ -34,13 +34,12 @@ const ArtDetail = (props) => {
                 <img src={artPiece?.url} alt="art piece"/>
                 <h3>Comments:</h3>
                 {artPiece?.comments?.map((comment) => (
-                    <p>{comment.comment}</p>
+                    <p>~{comment.user.username}~<br/>{comment.comment}</p>
                 ))}
                 <input
                 id="comment"
                 type="text"
                 required
-                autoFocus
                 placeholder="comment here"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
