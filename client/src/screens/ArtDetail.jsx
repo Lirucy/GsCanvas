@@ -22,7 +22,7 @@ const ArtDetail = (props) => {
         e.preventDefault();
         const newComment = {
             comment
-        }
+        } 
         await createComment(newComment, artId)
         history.push("/")
     }
@@ -36,7 +36,9 @@ const ArtDetail = (props) => {
                 {artPiece?.comments?.map((comment) => (
                     <p>~{comment.user.username}~<br/>{comment.comment}</p>
                 ))}
-                <input
+                {props.user ? (
+                  <>
+                  <input
                 id="comment"
                 type="text"
                 required
@@ -45,6 +47,11 @@ const ArtDetail = (props) => {
                 onChange={(e) => setComment(e.target.value)}
                 />
                 <button type="submit" onClick={clickHandler}>Comment</button>
+                  </>
+                ) : (
+                  <>
+                  </>
+                )}
             </article>
         </div>
     );
