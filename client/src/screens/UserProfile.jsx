@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllComments } from "../services";
+import ProfileComment from "../components/ProfileComment"; 
 
 const UserProfile = (props) => {
     const [filteredComments, setFilteredComments] = useState([])
@@ -10,18 +11,19 @@ const UserProfile = (props) => {
             const filtered = fetchedComments.filter(
                 (comment) => comment.user.id === props.user?.id
             )
+            console.log(fetchedComments)
             setFilteredComments(filtered)
         }
-        fetchedComments()
+        fetchComments()
     }, [props.user])
 
     return (
         <section id="user-profile-body">
             <h2>My Comments</h2>
             <article>
-                {/* {filteredComments.map((comment) => (
+                {filteredComments.map((comment) => (
                     <ProfileComment key={comment.id} comment={comment}/>
-                ))} */}
+                ))}
             </article>
         </section>
     );

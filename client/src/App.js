@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import ArtDetail from "./screens/ArtDetail"
 import Login from "./screens/Login";
 import Register from "./screens/Register";
+import UserProfile from "./screens/UserProfile";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login setUser={setUser}/>
+          </Route>
+          <Route path="/user-profile">
+            <UserProfile user={user}/>
           </Route>
           <Route path="/art/:id">
             <ArtDetail user={user}/>

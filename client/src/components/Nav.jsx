@@ -15,7 +15,7 @@ const Nav = (props) => {
       <Link to="/">Home</Link>
       {props.user ? (
         <>
-          <Link to=""><span>Hi, {props.user.username}!</span></Link>
+          <Link to="/user-profile"><span>Hi, {props.user.username}!</span></Link>
           <Link to="/login" onClick={clickHandler}>
             Log out
           </Link>

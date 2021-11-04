@@ -60,7 +60,7 @@ export const getOnePiece = async (id) => {
 
 export const getAllComments = async () => {
   try {
-    const response = await axios.get(`${apiURL}/api/comments`);
+    const response = await axios.get(`${apiURL}/api/comments/`);
     return response.data;
   } catch (error) {
     console.error(error.message);
