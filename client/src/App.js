@@ -16,6 +16,7 @@ import "./css/Home.css";
 import "./css/Login.css";
 import "./css/Nav.css";
 import "./css/Register.css";
+import "./css/UserProfile.css"
 
 function App() {
   const [user, setUser] = useState(null);
