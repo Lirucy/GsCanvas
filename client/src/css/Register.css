@@ -8,11 +8,11 @@
   padding: 0 auto;
   position: relative;
   text-align: center;
-  }
+}
 
-  #reg-form {
-    grid-row: 2/3;
-    justify-self: center;
-    padding: 0 25px 10px;
-    max-width: 350px;
-  }
+#reg-form {
+  grid-row: 2/3;
+  justify-self: center;
+  padding: 0 25px 10px;
+  max-width: 350px;
+}
