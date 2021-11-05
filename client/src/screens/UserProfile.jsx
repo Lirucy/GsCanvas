@@ -18,7 +18,7 @@ const UserProfile = (props) => {
     }, [props.user])
 
     return (
-        <section id="user-profile-body">
+        <section id="profile-body">
             <h2>My Comments</h2>
             <article>
                 {filteredComments.map((comment) => (
