@@ -1,0 +1,14 @@
+#bio-body {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-rows: 1fr;
+    min-width: 97vw;
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: calc(100vh - 167px);
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+  }
