@@ -1,12 +1,21 @@
 * {
   color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
   text-decoration: none;
 }
 
 button, input, textarea {
   border: 1px solid darkred;
+  border-radius: 10px;
   background-color: darkred;
   background-image: linear-gradient(black, darkred, black);
+  margin: 5px;
+}
+
+h1 {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 40px;
 }
 
 .App {
