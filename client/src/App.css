@@ -18,6 +18,20 @@ h1 {
   font-size: 40px;
 }
 
+a, .fade{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+a:hover {
+color: orangered;
+}
+
+.fade:hover {
+  color: orangered;
+  }
+
 .App {
   background-color: black;
 }

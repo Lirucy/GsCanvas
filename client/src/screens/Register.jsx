@@ -46,7 +46,7 @@ const Register = (props) => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="fade" type="submit">Submit</button>
       </form>
     </section>
   );

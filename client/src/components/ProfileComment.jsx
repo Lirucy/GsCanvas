@@ -11,7 +11,7 @@ const ProfileComment = (props) => {
         <article>
             <img src={art_id.url}/>
             <p>{comment}</p>
-            <Link to={`/edit-comment/${props.comment.id}`}><button>Edit Comment</button></Link>
+            <Link to={`/edit-comment/${props.comment.id}`}><button className="fade" >Edit Comment</button></Link>
         </article>
     );
 };

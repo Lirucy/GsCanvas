@@ -31,7 +31,7 @@ const ArtDetail = (props) => {
         <div>
             <article>
                 <h3>{artPiece?.title}</h3>
-                <img src={artPiece?.url} alt="art piece"/>
+                <img className="fade" src={artPiece?.url} alt="art piece"/>
                 <h3>Comments:</h3>
                 {artPiece?.comments?.map((comment) => (
                     <p>~{comment.user.username}~<br/>{comment.comment}</p>
@@ -46,7 +46,7 @@ const ArtDetail = (props) => {
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 />
-                <button type="submit" onClick={clickHandler}>Comment</button>
+                <button className="fade" type="submit" onClick={clickHandler}>Comment</button>
                   </>
                 ) : (
                   <>

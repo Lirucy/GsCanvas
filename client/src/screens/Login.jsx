@@ -37,7 +37,7 @@ const Login = (props) => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button className="fade" type="submit">Login</button>
       </form>
     </section>
   );
