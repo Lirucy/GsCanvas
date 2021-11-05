@@ -3,43 +3,27 @@ import { useParams, useHistory } from "react-router-dom";
 import {
   getOneComment,
   updateComment,
-  getAllComments,
   deleteComment,
 } from "../services";
 
 const EditComment = () => {
-  const [selectedComment, setSelectedComment] = useState({});
-  const [comment, setComment] = useState("");
+  const [selectedComment, setSelectedComment] = useState("");
   const params = useParams();
   const commentId = params.id;
   const history = useHistory();
 
   useEffect(() => {
     getOneComment(commentId).then((fetchedComment) =>
-      setSelectedComment(fetchedComment)
+      setSelectedComment(fetchedComment.comment)
     );
   }, [commentId]);
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      const fetchedComments = await getAllComments();
-      const filtered = fetchedComments.filter(
-        (comment) => comment.id === commentId
-      );
-      const currentComment = filtered[0];
-      setSelectedComment(currentComment);
-      setComment(comment.comment);
-    };
-    fetchComments();
-  }, []);
 
   const handleUpdate = async (e) => {
     try {
       e.preventDefault();
-      setComment(comment);
 
       const commentInfo = {
-        comment,
+        comment: selectedComment,
       };
       await updateComment(commentInfo, commentId);
       history.push("/user-profile");
@@ -61,8 +45,8 @@ const EditComment = () => {
         <textarea
           type="text"
           required
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          value={selectedComment}
+          onChange={(e) => setSelectedComment(e.target.value)}
         />
         <div className="edit-btns">
           <button id="submit-btn" className="fade" type="submit">
