@@ -43,6 +43,7 @@ a:hover {
 
 .App {
   background-color: black;
+
 }
 
 #app-title {
@@ -51,4 +52,5 @@ a:hover {
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
+
 }

@@ -20,7 +20,7 @@ const Login = (props) => {
   }
 
   return (
-    <section>
+    <section id="login-body">
       <h3>Login</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>

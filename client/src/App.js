@@ -8,7 +8,11 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import UserProfile from "./screens/UserProfile";
 import "./App.css";
+import "./css/EditComment.css"
+import "./css/Home.css"
+import "./css/Login.css"
 import "./css/Nav.css"
+import "./css/Register.css"
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,6 +22,7 @@ function App() {
       <Nav user={user} setUser={setUser}/> 
       <div className="divider" style={{color: "darkred"}}>-</div>
       <Link><div id="app-title" className="fade">G's Canvas</div></Link>
+      <div className="divider" style={{color: "darkred"}}>-</div>
       <Switch>
         <main>
           <Route exact path="/">

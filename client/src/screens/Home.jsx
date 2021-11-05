@@ -14,11 +14,11 @@ const Home = () => {
     
     return (
         <section id="home-body">
-            <article className="all-art">
+            <div className="all-art">
                 {artPieces.map((artPiece) => (
                     <Art key={artPiece.id} artPiece={artPiece} />
                 ))}
-            </article>
+            </div>
         </section>
     );
 };

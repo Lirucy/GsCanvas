@@ -1,4 +1,4 @@
-#home-body {
+#register-body {
     display: grid;
     row-gap: 10px;
     column-gap: 10px;
@@ -7,9 +7,7 @@
     min-width: 97vw;
     max-width: 1300px;
     margin: 0 auto;
-    max-height: calc(100vh - 167px);
+    min-height: calc(100vh - 167px);
     padding: 0 10px;
     position: relative;
-    overflow-y: scroll;
-    overscroll-behavior-y: none;
   }

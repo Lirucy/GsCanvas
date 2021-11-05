@@ -54,7 +54,7 @@ const EditComment = () => {
   };
 
   return (
-    <div>
+    <div id="edit-body">
       <form onSubmit={handleUpdate}>
         <h3>Edit your comment</h3>
         <label htmlFor="comment"></label>
