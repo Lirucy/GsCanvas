@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Nav user={user} setUser={setUser}/> 
       <div className="divider" style={{color: "darkred"}}>-</div>
-      <Link><div id="app-title" className="fade">G's Canvas</div></Link>
+      <Link to="/bio"><div id="app-title" className="fade">G's Canvas</div></Link>
       <div className="divider" style={{color: "darkred"}}>-</div>
       <Switch>
         <main>
