@@ -14,6 +14,7 @@ const Home = () => {
     
     return (
         <section className="home-body">
+            <h1>G's Canvas</h1>
             <article className="all-art">
                 {artPieces.map((artPiece) => (
                     <Art key={artPiece.id} artPiece={artPiece} />
