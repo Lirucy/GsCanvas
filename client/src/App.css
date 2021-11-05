@@ -16,9 +16,11 @@ textarea {
 }
 
 button,
+form,
 input,
 textarea {
   box-shadow: 1px 1px 5px gray;
+  border-radius: 10px;
 }
 
 .divider {
