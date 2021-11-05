@@ -24,7 +24,7 @@ const Register = (props) => {
   return (
     <section id="register-body">
       <h3>Register</h3>
-      <form onSubmit={handleSubmit}>
+      <form id="reg-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
           id="username"
