@@ -28,7 +28,7 @@ const ArtDetail = (props) => {
     }
 
     return (
-        <div>
+        <div id="detail-body">
             <article>
                 <h3>{artPiece?.title}</h3>
                 <img className="fade" src={artPiece?.url} alt="art piece"/>

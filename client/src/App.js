@@ -8,6 +8,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import UserProfile from "./screens/UserProfile";
 import "./App.css";
+import "./css/ArtDetail.css"
 import "./css/EditComment.css"
 import "./css/Home.css"
 import "./css/Login.css"
