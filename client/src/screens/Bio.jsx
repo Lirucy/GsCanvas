@@ -4,7 +4,7 @@ const Bio = () => {
     return (
         <section>
             <h2>Artist: Gianna Hertel</h2>
-            <img src="" alt="Gianna Hertel"/>
+            <img src="https://iili.io/50KOR2.png" alt="Gianna Hertel"/>
             <p></p>
         </section>
     );
