@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./screens/Home";
 import Nav from "./components/Nav";
 import ArtDetail from "./screens/ArtDetail"
+import Bio from "./screens/Bio";
 import EditComment from "./screens/EditComment";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route path="/art/:id">
             <ArtDetail user={user}/>
+          </Route>
+          <Route path="/bio">
+            <Bio />
           </Route>
         </main>
       </Switch>
