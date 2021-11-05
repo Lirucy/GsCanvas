@@ -14,11 +14,9 @@ const Home = () => {
     
     return (
         <section id="home-body">
-            <div className="all-art">
                 {artPieces.map((artPiece) => (
                     <Art key={artPiece.id} artPiece={artPiece} />
                 ))}
-            </div>
         </section>
     );
 };

@@ -1,5 +1,3 @@
-
-
 const Bio = () => {
     return (
         <section id="bio-body">
