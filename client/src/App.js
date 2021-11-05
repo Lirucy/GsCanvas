@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./screens/Home";
 import Nav from "./components/Nav";
@@ -16,6 +16,8 @@ function App() {
   return (
     <div className="App">
       <Nav user={user} setUser={setUser}/> 
+      <div className="divider" style={{color: "darkred"}}>-</div>
+      <Link><div id="app-title" className="fade">G's Canvas</div></Link>
       <Switch>
         <main>
           <Route exact path="/">

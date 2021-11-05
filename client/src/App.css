@@ -1,11 +1,13 @@
 * {
   color: white;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 25px;
   text-decoration: none;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   border: 1px solid darkred;
   border-radius: 10px;
   background-color: darkred;
@@ -13,27 +15,40 @@ button, input, textarea {
   margin: 5px;
 }
 
-h1 {
-  font-family: 'Princess Sofia', cursive;
-  font-size: 40px;
+button,
+img,
+input,
+textarea {
+  box-shadow: 1px 1px 5px gray;
 }
 
-a, .fade{
+.divider {
+  background-image: linear-gradient(black, darkred, black);
+}
+
+a,
+.fade {
   text-decoration: none;
   color: white;
   transition: all 0.3s ease 0s;
 }
 
 a:hover {
-color: orangered;
+  color: orangered;
 }
 
 .fade:hover {
   color: orangered;
-  }
+}
 
 .App {
   background-color: black;
 }
 
-
+#app-title {
+  font-family: "Princess Sofia", cursive;
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+}
