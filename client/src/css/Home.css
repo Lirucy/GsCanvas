@@ -13,3 +13,9 @@
   overflow-y: scroll;
   overscroll-behavior-y: none;
 }
+
+@media (min-width: 768px) {
+  #home-body {
+    justify-items: center;
+  }
+}
