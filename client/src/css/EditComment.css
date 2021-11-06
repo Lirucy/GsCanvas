@@ -1,13 +1,18 @@
 #edit-body {
-    display: grid;
-    row-gap: 10px;
-    column-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    grid-template-rows: 1fr;
-    min-width: 97vw;
-    max-width: 1300px;
-    margin: 0 auto;
-    min-height: calc(100vh - 167px);
-    padding: 0 10px;
-    position: relative;
- }
+  display: grid;
+  grid-template-columns: auto-fit, minmax(350px, 1fr);
+  grid-template-rows: 1fr 2fr 2fr;
+  max-width: 350px;
+  margin: 0 auto;
+  min-height: calc(100vh - 167px);
+  padding: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+#edit-form {
+  grid-row: 2/3;
+  justify-self: center;
+  padding: 0 25px 10px;
+  min-width: 350px;
+}
