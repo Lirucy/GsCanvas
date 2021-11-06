@@ -19,9 +19,7 @@
 
 @media (max-width: 425px) {
   #edit-form {
-    grid-row: 2/3;
-    justify-self: center;
-    padding: 0 25px 10px;
+    padding: 0;
     max-width: 350px;
   }
 }
