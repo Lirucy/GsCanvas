@@ -39,7 +39,7 @@ const EditComment = () => {
 
   return (
     <div id="edit-body">
-      <form onSubmit={handleUpdate}>
+      <form id="edit-form" onSubmit={handleUpdate}>
         <h3>Edit your comment</h3>
         <label htmlFor="comment"></label>
         <textarea
