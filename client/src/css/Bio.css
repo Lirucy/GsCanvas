@@ -12,6 +12,7 @@
 
 #bio-desc {
   grid-row: 3/4;
+  padding: 0 5px;
 }
 
 #bio-pic {
