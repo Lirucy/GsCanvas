@@ -4,10 +4,10 @@
   column-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: 1fr;
-  min-width: 97vw;
+  min-width: 100vw;
   max-width: 1300px;
   margin: 0 auto;
-  max-height: calc(100vh - 167px);
+  height: calc(100vh - 167px);
   padding: 0 auto;
   position: relative;
   overflow-y: scroll;

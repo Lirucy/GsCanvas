@@ -1,5 +1,6 @@
 #detail-body {
   display: grid;
+  justify-items: center;
   row-gap: 10px;
   column-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -7,7 +8,7 @@
   min-width: 100vw;
   max-width: 1300px;
   margin: 0 auto;
-  max-height: calc(100vh - 167px);
+  height: calc(100vh - 167px);
   padding: 0 auto;
   position: relative;
   overflow-y: scroll;

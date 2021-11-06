@@ -8,7 +8,7 @@ const ProfileComment = (props) => {
     // const [artPiece, setArtPiece] = useState({})
 
     return (
-        <article>
+        <article id="detail-piece">
             <img src={art_id.url}/>
             <p>{comment}</p>
             <Link to={`/edit-comment/${props.comment.id}`}><button className="fade" >Edit Comment</button></Link>
