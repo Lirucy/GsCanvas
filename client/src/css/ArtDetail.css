@@ -1,6 +1,5 @@
 #detail-body {
   display: grid;
-  justify-items: center;
   row-gap: 10px;
   column-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -13,4 +12,10 @@
   position: relative;
   overflow-y: scroll;
   overscroll-behavior-y: none;
+}
+
+@media (min-width: 768px) {
+  #detail-body {
+    justify-items: center;
+  }
 }
