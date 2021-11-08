@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { getAllArt } from "../services";
 import Art from "../components/Art";

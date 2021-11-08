@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
-import getOnePiece from "../services";
+import { Link } from "react-router-dom";
 
 const ProfileComment = (props) => {
   const { comment, art_id } = props.comment;
