@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import {
-  getOneComment,
-  updateComment,
-  deleteComment,
-} from "../services";
+import { getOneComment, updateComment, deleteComment } from "../services";
 
 const EditComment = () => {
   const [selectedComment, setSelectedComment] = useState("");

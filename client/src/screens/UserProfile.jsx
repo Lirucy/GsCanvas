@@ -11,18 +11,17 @@ const UserProfile = (props) => {
       const filtered = fetchedComments.filter(
         (comment) => comment.user.id === props.user?.id
       );
-      console.log(fetchedComments);
       setFilteredComments(filtered);
     };
     fetchComments();
   }, [props.user]);
 
   return (
-      <section id="profile-body">
-        {filteredComments.map((comment) => (
-          <ProfileComment key={comment.id} comment={comment} />
-        ))}
-      </section>
+    <section id="profile-body">
+      {filteredComments.map((comment) => (
+        <ProfileComment key={comment.id} comment={comment} />
+      ))}
+    </section>
   );
 };
 

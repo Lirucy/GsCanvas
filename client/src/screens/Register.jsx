@@ -1,30 +1,30 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 import { register } from "../services";
 
 const Register = (props) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory()
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-    
-      const newUser = {
-          username, 
-          email, 
-          password,
-      };
-      const user = await register(newUser);
-      props.setUser(user);
-      history.push("/")
-  }
+    e.preventDefault();
+
+    const newUser = {
+      username,
+      email,
+      password,
+    };
+    const user = await register(newUser);
+    props.setUser(user);
+    history.push("/");
+  };
 
   return (
     <section id="register-body">
       <form id="reg-form" onSubmit={handleSubmit}>
-      <h3>Register</h3>
+        <h3>Register</h3>
         <label htmlFor="username">Username:</label>
         <input
           id="username"
@@ -46,7 +46,9 @@ const Register = (props) => {
           required
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="fade" type="submit">Submit</button>
+        <button className="fade" type="submit">
+          Submit
+        </button>
       </form>
     </section>
   );

@@ -3,7 +3,6 @@ import { useParams, useHistory } from "react-router-dom";
 import { getOnePiece, createComment } from "../services";
 
 const ArtDetail = (props) => {
-  // const { username } = props.user;
   const [artPiece, setArtPiece] = useState({});
   const [comment, setComment] = useState("");
   const params = useParams();

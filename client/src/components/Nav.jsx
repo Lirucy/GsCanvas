@@ -3,19 +3,19 @@ import { logout } from "../services";
 
 const Nav = (props) => {
   const history = useHistory();
-
   const clickHandler = async () => {
     await logout();
     props.setUser(null);
     history.push("/");
   };
-
   return (
     <nav>
       <Link to="/">Home</Link>
       {props.user ? (
         <>
-          <Link to="/user-profile"><span className="fade">Hi, {props.user.username}!</span></Link>
+          <Link to="/user-profile">
+            <span className="fade">Hi, {props.user.username}!</span>
+          </Link>
           <Link to="/login" onClick={clickHandler}>
             Log out
           </Link>

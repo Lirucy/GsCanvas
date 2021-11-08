@@ -1,7 +1,7 @@
 #register-body {
   display: grid;
   grid-template-columns: auto-fit, minmax(350px, 1fr);
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 0.5fr 2fr 2fr;
   max-width: 350px;
   margin: 0 auto;
   min-height: calc(100vh - 167px);
